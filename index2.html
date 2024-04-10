@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#services" style="--i:3">Skill</a>
+            <a href="#skills" style="--i:4">Portfolio</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Heerekar Deepthi</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>I am a dedicated Student with a strong passion for creating innovative solutions. <br> My goal is to leverage my expertise in contribute to exciting projects while continuing to grow and learn in the rapidly evolving world of AI and data science...!</p></br>
+            <div class="home-sci">
+                <a href="#" style="--i:7"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAaJJREFUSEvt100rRGEUwPH/MWZSMpk7RiQWLKhJdrMTvgA+hlBYs1IsSZGVnQ+gZKcoK2spRYoS5uWOl5W8HObOi7maMjPuzJXc3fPUc373Oec890Vw6RKXXH4RbGoHQqejmVDOMeQyP6Z9xzFtxcMVOJ4J5ZU2QnKdxe1wUgdR9hzd7ac0RED2i4eVU4R2oO5HNySUBA9jyDY3Wo+PHWCgbLxoWLglIC05yNQxYL3yMLwCQQy5t7CkLqHMVANO9fYuygZKGGESaKwOXLZSYGHRNU6tFUaBdKqVKbDGmx9dvpGZiwDDKMv4OKBBopjaD8wDgza+JLiWEH6JWwFMXQUmgAUMmbPmEhrG4AyRJxuiWkuSI6AnN+8onI1qai9ebmiQWN4pGAfWKgebugWMkDoFSh9BObawuEao4bAycEL9SKYH0sIshixmStMBXFQGvtMu3jjLBVdWCMq0NX7QJl74TH1JNfbSnKtboeaKaTceTvIaax1DUrWFRw3xTLS8Hf/DX8/x30u1a8/qqsGufeylXwYufN46mdpvYv2iP4kq7fodznwdLpV5o5IAAAAASUVORK5CYII="/></a>
+                <a href="#" style="--i:8"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA2hJREFUSEvFlt2LVHUYxz/fUZZeMOac2U1d2dSlAl+wMHtR+gPEQC0vugjXDDWvSoS6CArEIEgxIpBSfIm6CMEXEISuu8hcpbRUEDRNm2B3z8yKSubuzJPnnJn1nDNzZs+sF/uDuZjf73mez/P8zvPyE5O0NElc2gOb5SjxEqIXYyYgxD/AVRxOIlWyBpINXLbZGB8Ba4BCivEy4jDiM/K6Mp4DrcFmHZT4GPEh0DGesdr5KPA5DtuQ7qXppIMHbSY5jiNeyAiMi4l+RllNl4rN9JuDyzYH42dgxoSgD5SKiGU4upa00wgeNocKvyCeqQlfDpIIejM6cQ3xH8azNfmLwFJc3YzqN4I9O4hYNyZkLKegHxm2xVTYQY4FGL4x/zeKsQAxD7hMla10qp+SvQr8FAHtxdWmdPCQvUyOk7HIxFwcXc0YbSg2YDOYGpRZfRnGQgq6UN+IR1yy74G3EuDncXS2LbBn8xHnE3b24WhDI9hsCmWGgHzEzwE6WMg0DbYJfgIFn6I7olfE1axG8LAtoUp/wsv3cPRVW9C6sGebEN/EdKvMp1O+Q5GWWbbVGEdjgjl6yevPCYEHrZsp/J3QXYmr43GwZxsQe2OCFbrpUjRJsvtQtMd4hDtpN/gguTzbiNiTsPwcrs5lp0UkPetB/BXTNT6goJ3Jq34D43DCw3dwdGBC4LKtwjiWsPc2jr6Ng4dsHjnG6qymcAJXr00I7NkRxOuJnHmRvE7Hwf6/kvnlFB97og9H37UFL1sfRhBZZN3GIV+f2ckG8jXwLjCCcRaxJFAU+6nwCZ1KZmncdDhctgF9DY4aBylofX0/Do52HPE+xq8QlJh/C1XEGYxduPohZtiz5cCniMWxEo3TF+Hq9+Zgf9ezLxBbAgFjKTmmYxwaewiIxhZ6y7oYYSD1cxhfUlBos7Yap9N1e5THg0GxCAiTyzd8j7WIu7ja3RRQMv8zRFtkXew37rCMHv3bGhwm2VOIUxjTgc047EGylglWMr/DzUnIFDFeoaDrSd30p0+YKCcgmLW3gUtAz/2In0yJ2G8WPZGzPzBWNIOG+dpqhW3Pz9KtQM7PAFx1poD91uo/lUaAHdxkO3N1N818tudt2P42A0/j6s0UsF+3N6iye9yyGzfiltfxcIfZIn44RlPtSQP/D06mBC7aSaNfAAAAAElFTkSuQmCC"/></a>
+                <a href="#" style="--i:9"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAApdJREFUSEvtlj9oE3EUxz8vCRaUVu8uVUH806J1EBERpE6KULCDg4i4SUURxQxFQUEytBQni6WIoIhVcdJBF0HBoSIucVLBRfEPKAWb3qVd1LYmT++SlORy16RtsEvfdu/3fu/z3vfe8U5YJJNF4rIE/m/K1yZ1RneiHECZxpL+wOocvQgIwlMMeVutg3DwqK4lRhdwBthQSDQFHEJoRlnt+YRRlDHgEbCsEPcFuEGMIZrEPauwYHBaG4nyGYhXq7zK+QgGrYhM+uOCwbYOIHQvEJq/rvRiSU918Li2kuMDEK0LGCbJ0kqzjJTmq+zY1iGE43WC5tMIAxhyLhys2kAGG1hRVzCkMViHyHQxb3nHGe1CuVNnaLHrwxjiTn5BhFKKoy+AvQHgLPAAZSvCrpDCUsAn4GjIfDzBlIOV4LzMP4GIL3EOZROWfPP8jiaAa76Y05hy0/NldCPqfYr+PL8wZXkl2NHtwLuAboYxZf+M39GV4M1BcepdNSxMmSiJGQb2VeQSWjDka37eimbrEYSHVcG2NiE48wIrnVjyrByc0SRKXwD4D0oLlnwPlVo5hSW3vHNb1yOe1LGAjrsxZNAP7kc5HzI4+eGCbcCOeQ6Xq28PhvT6pe5DSIYkrZf7AqZcKQc7egm4XC9CSJ4Eplz3gzv/yfgYaCi7JFwlR4oIJ1E6ZilMgecot4E9AUvmN9CBKa/Kwe7ThG4hyz3vYqkpH4nRTo5G7x3niHs72d097i6OMIbyhizTRHkJbPYVOEyEE6wSd097VrkkVCOMcxZIoLQV4u5jyrGaXkNGUyi7C7HvUQZnJr4kwey/Pra2e5VOkWSN/KgJnNY2onST4y5xeR12p7Z/rpqIcwtaAs9NrwVEL5rUfwFXvsIfHFN9mAAAAABJRU5ErkJggg=="/></a>
+                <a href="#" style="--i:10"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA6tJREFUSEvNlluIVWUUx3/rzGkUK3F/e8TJS4qooVDmaC+GJtVbxogEBpFdQB96s6RAVLwgBRX5EvSgThkEPZhh6otCpILijBdCScIexBvmOXsPpiLVPivXd44z57L3OTO9jN/LgfN9e/3X+q//uggjdGSEcHnIgW/qE7QxA6GtKUNKQsJFxsv1VkxmR/yndpLnU+AVIGhlqO4+Bg6Q8GGWE+nAkRrY98CjFYN3gDNA0sKBdqALGFV5dxtYgZOD9d81Al/TMYzmD6ATpQflK0JOIdIKtGxbNU8/i1A2A4uAa9xjJhPlbjV4I3BRNyNs9BE7eX2YFEOsbwJCILuJ9GdgiXcilE3NgSO9AkziHzqZIDeGBWygym7/TYl3aOMMylngKk4mZwOXBWWKvICT2amgBZ1Ejm5goRELHCdhrxdRrCtRvilTzruE0kOkfwGPkWc8Y6XwwGYt1f3aRYlTwDGcWH5qT1FXI3wGPF53cwtlDaHsoqBvIwjKOTqkl0hNL9OBp3FyLh04UgM74kvBydIa40X9oAJqINvJcZoSjwDPIKzxUdlvINtrvov0Vw+qLCSU4+nABX2ZHIdQ9hLK8gEDsc5D6UUokDCfDrlaZ/xJ4LRnQukilPMD95Fajud6hTs51hxY2EMgrw18XNQtCBtQ3ieUL1JzH+lHwCfAepxsqwI2h+YBi3FyNCvHL1HicEPEkf4EGPVLcXIgFTjW5Sh7qHc6UtNMF8ISAvklHThWqzmrvf04ebXK6x/vd65uhG4C2Tcs4KJaihYgvEggZtufWlUPAu/DiZVM+cS60TcBZS2hfJ5B9TrAKF6Hk4+r0tSHMB/hBQIx4TYFro24qFMQLgB3KfFsg7hinYr6Xp4n4amawTAkcUX6vK/htHKK9D3gS+B2pZz6KNGOeMVaOY1BWUUoO+oUbwqfQ47nGCd9WRFb2ZgKsxrIKgSjOq2BmOJ3NqRhsIHMxYnVdArVRZ2McBm4hJNpqbkst8xlgLFjE+sECT+kzl3VHDE2lUahTCEUmwMpwKptxPT7LpQwcSibRKpzD/7s1wWU6PXpCRhXPVobx2KsO32Dh+9w8kZTw60uIzUV22zuIRSzOXAagW9pB//ye2XdOYiyFcdJREqtcPz94CKwtZKOmDyzqieTPUtffWJ9C+XrKqD/u/oYwkoC+bbe6exlL9bFvjeDdbDckKIdfGTs7PcVUNU0mlNdj3BDJ9BO+lKQ5c3f/NZqe3nIF/ph8jyU5yMW8X/oiVkudBafIgAAAABJRU5ErkJggg=="/></a>
+            </div>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+        <img class="picture" src="C:\Users\Anurag\OneDrive\Documents\Desktop\Deepthi\deepthi img.jpg"/>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+        </div>
+        <div class="about-text">
+            <h2> About<span> Me</span></h2>
+            <h4>Web Developer!</h4>
+            <p>I am a passionate and focused individual pursuing a career in artificial intelligence and data science. With a background in web development and Java, I bring a blend of technical skills and creativity to my work, I am confident in my abilities and always eager to learn and grow in my field Constantly seeking to expand my knowledge and skills in these cutting-edge fields, My confidence, coupled with my dedication, drives me to excel in my field and continuously expand my knowledge and skills.</p>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAY9JREFUSEvtlU1Kw1AUhb9rdSok1anOdCJOdBGC+C9atBYXobtwESoq/guK4A7EBVjcgM6aiENteyVNahpMmqSIEWxmIe+eL++8+84VMnokIy5d8K8537U62uqK9pOXt7ZnkWSNJ5DMakvXgR3qTDIgz6FwS4eAB2ALUw7jmiUebOsGyh40rl4Zg3FEagFh1RyvlFFGAAVKmHLQDt4eXNFlhBOgpyEobGLIfqigrSWUXe8H6yir5OU8Ch4NdqHHQA5wdljEFOc9+rG0ADg7dWuERQy5DisIB9s6i3LpCVQRVjDkKu7cGt9tXUA5a6ldCoN/B7vQC6AXqALzmHKbCNpc5MJPvzSUGfJy16oRBFd0CuHGK/gAFlJDm+qWTgOOS33AO8pcK/yPgN0zysBq/4wyaK4mPJPrFIT7AQJrkXc5GCA1lEJnAeJ3ZxFw0sppxCcMxkIj0+YRGPUi0wmbo84j04e7Q6LGBIPyEhGZwyj3wPbPDAnf9gzGYqrYSrY4fiwm00m9qgtObVmnBf/P6k+f7asf60QADgAAAABJRU5ErkJggg=="/>
+                        <h2>Java Developer</h2>
+                        <p>As a passionate Java developer, I have a strong foundation in Java programming and a deep understanding of object-oriented programming principles. I am experienced in developing robust and scalable applications using Java technologies. My expertise includes with database management systems like MySQL and Oracle. I am also skilled in creating RESTful APIs and integrating third-party services. With a keen eye for detail and a commitment to delivering high-quality software, I strive to continuously expand my knowledge and stay updated with the latest trends in Java development.</p>
+                            <a href="#" class="read">learn more</a>
+                    </div>
+                    <div>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAARhJREFUSEvtl8FxwjAQRd/SADFugBLcQdJADlzCcGCGEuggpgNKILnmElJB0oFLoAGcSQNsxgcjYLAsjezxRT7au3qrv+vVShjokYG4NIN/dcWJKSMOJLLrOsBmcKnfwCPww0SeIjhUASN1lVNldbFgBoyBP6DwAiklI95IZN/kZ8BHzRFevQBtxsoLqXzcM7PtuG1Z2/darU8mMrODQzC3vg5/RD8NJAh81C1ChlKQytpLkCCwg3NjMA6+/XSuCL6Tkyi1EcWhQGJVnxVwUMtWXF/As/OxeNnhDPj6SBV29Rhlm7mWKO8erdKMSAZ87a5sSCWvXtoPiVIXwBx4aA2gsx23kiwGQTmOYB8FHC4D/UwgDkEOBv4HnmewHy+9qvQAAAAASUVORK5CYII="/>
+                        <h2>Web Developer</h2>
+                        <p>As a passionate web developer, I excel in creating dynamic and user-friendly websites that meet client needs and industry standards. With a strong foundation in HTML, CSS, and JavaScript, I have the ability to design responsive and visually appealing web pages. My expertise extends to various web development frameworks and libraries, such as React, Angular, and Vue.js, allowing me to build interactive and feature-rich web applications. I am also proficient in backend technologies like Node.js and PHP, enabling me to develop full-stack applications. With a keen eye for design and a focus on usability, I strive to deliver exceptional digital experiences that engage users and achieve business goals.</p>
+                            <a href="#" class="read">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h1 class="sub-title">My <span>Skills</span></h1>
+
+    <section>
+        <div class="container1" id="Skills">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars">
+                <div class="bar"><i class='bx bxl-html5' style='color:#122dc3'  ></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-css3' style='color:#a7ca19'  ></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-javascript' style='color:#da995b'  ></i>
+                    <div class="info">
+                        <span>Javascript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxs-data' style='color:#bd17e3'></i>
+                    <div class="info">
+                        <span>Database</span>
+                    </div>
+                    <div class="progress-line database">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-java' style='color:#f39909'  ></i>
+                    <div class="info">
+                        <span>Java</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
+                    
+                </div>
+                <div class="bar"><i class='bx bxl-c-plus-plus' style='color:#eee8cb'></i>
+                    <div class="info">
+                        <span>C Program</span>
+                    </div>
+                    <div class="progress-line cprogram">
+                        <span></span>
+                    </div>
+                    
+                </div>
+                <div class="bar"><i class='bx bxl-c-plus-plus' style='color:#bd87b5'  ></i>
+                    <div class="info">
+                        <span>C++ Program</span>
+                    </div>
+                    <div class="progress-line c-program">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">creativity</div>
+            </div>
+            <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">TeamWork</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div id="portfolio" id="project">
+        <div class="main-text" id="project">
+            <h2>My <span>Project</span></h2> 
+
+            <div class="portfolio-content">
+                <div class="row">
+                    <img src="https://circuitbest.com/wp-content/uploads/2020/10/Line-Follower.jpg"/>
+                    <div class="layer">
+                        <h5>Line Following Robot</h5>
+                        <p>I have developed a project called a Line Following Robot using Arduino. This project involves designing a robot that can autonomously follow a predefined path. It uses sensors to detect and follow lines on the ground, making it suitable for applications like warehouse automation or educational robotics. The robot's behavior is controlled by an Arduino microcontroller, which processes sensor inputs and adjusts the motors to stay on course. This project showcases my skills in electronics, programming, and robotics.</p>
+                        <a href="#"><i class='bx bx-link-external' style='color:#ffffff'  ></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="https://sanketnaik.dev/media/dp-card.png"/>
+                        <div class="layer">
+                        <h5>Doctor's Handwritten Recognition</h5>
+                        <p>I have developed a project called Doctor's Handwritten Recognition using Python, which focuses on converting handwritten prescriptions into digital text. This project utilizes various Python libraries and tools, including machine learning algorithms and image processing techniques, to accurately interpret and transcribe handwritten notes. By analyzing images of handwritten text, the system can extract relevant information and present it in a legible format, aiding in the digitization and organization of medical records. This project demonstrates my proficiency in Python programming, image processing.</p>
+                        <a href="#"><i class='bx bx-link-external' style='color:#ffffff'  ></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's Work Together</h4>
+        <p>For any inquiries or opportunities, please feel free to reach out to me. I am open to collaborations, projects, and discussions related to web development, Java development, artificial intelligence, and data science. You can contact me via email or connect with me on LinkedIn to explore potential synergies and ventures. Looking forward to hearing from you!</p>
+        <div class="contact-list">
+            <li><i class='bx bxs-send'></i>contact@gmail.com</li>
+        </div>
+        <div class="contact-icons">
+            <a href=""><i class='bx bxl-linkedin-square' ></i></a>
+            <a href=""><i class='bx bxl-instagram' ></i></a>
+        </div>
+    </div>
+</section>
+<div class="last-text">
+    <p>Developed with love by Heerekar Deepthi &#169; 2024.</p>
+</div>
+<a href="#" class="top"><i class='bx bx-up-arrow-alt'></a>
+    <script src="main2.js"></script>
+</body>
+</html>
