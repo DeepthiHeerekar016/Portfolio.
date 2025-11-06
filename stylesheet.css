@@ -11,45 +11,96 @@ body {
     background: black;
 }
 
+/* ---------- HEADER STYLING ---------- */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 8%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.2);
 }
 
+/* when scrolled: smaller header */
+.header.scrolled {
+  background: rgba(8, 27, 41, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 8%;
+  box-shadow: 0 0 20px rgba(12, 24, 24, 0.4);
+}
+
+/* hide header when scrolling down */
+.header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Logo left */
 .logo {
-    position: relative;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
+  font-size: 22px;
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
 
+/* Navbar right */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navigation links */
 .navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.15s * var(--i));
+  letter-spacing: 1px;
 }
 
-.navbar a:hover {
-    color: #0ef;
+.navbar a:hover,
+.navbar a.active {
+  color: rgb(234, 242, 243);
+  transform: scale(1.05);
+}
+
+/* ---------- Animations ---------- */
+@keyframes slideRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .home {
@@ -151,18 +202,19 @@ body {
 }
 
 .picture {
-    align-items: center;
-    display: inline-block;
-    padding: 5px 5px;
+    width: 400px;              /* make it smaller */
+    height: 400px;             /* maintain circle shape */
     border-radius: 50%;
-    color: #081b29;
+    object-fit: cover;         /* ensures image fits nicely */
+    float: right;              /* moves image to right side */
+    margin: 10px 0 20px 20px;  /* spacing around image */
     background: #0ef;
-    opacity: 0;
+    padding: 5px;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    opacity: 0;
 }
+
 
 .about {
     display: grid;
@@ -185,7 +237,7 @@ body {
     font-weight: 600;
     color: #fff;
     line-height: 1.7;
-    margin: 15px 0 30px;
+    margin: 15px 0 50px;
 
 }
 
@@ -193,7 +245,7 @@ body {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 #services {
@@ -518,21 +570,21 @@ section {
 
 @keyframes animate-path2 {
     100% {
-        stroke-dashoffset: 175;
+        stroke-dashoffset: 55;
         ;
     }
 }
 
 @keyframes animate-path3 {
     100% {
-        stroke-dashoffset: 125;
+        stroke-dashoffset: 50;
         ;
     }
 }
 
 @keyframes animate-path4 {
     100% {
-        stroke-dashoffset: 75;
+        stroke-dashoffset: 5;
         ;
     }
 }
@@ -562,7 +614,7 @@ section {
 
 .main-text {
     padding-top: 130px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .main-text h2 {
@@ -570,7 +622,7 @@ section {
     line-height: 1;
     text-align: center;
     margin-top: 0px;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
     justify-content: center;
     align-items: center;
 }
@@ -650,6 +702,180 @@ section {
     height: 100%;
 }
 
+/* Common section styling */
+.dialog-section {
+  background: black;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Heading centered */
+.dialog-section .heading {
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.dialog-section .heading span {
+  color: #0ef;
+}
+
+/* Container (boxes below heading) */
+.dialog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* centers all boxes */
+  gap: 2rem;
+  padding: 0 50px;
+}
+
+.dialog-box.experience {
+  background: #0a0a0a;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #0ef, #00bcd4) 1;
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.dialog-box.experience:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #0ef;
+}
+
+/* Responsive layout — 2 boxes on top, 1 below */
+@media (max-width: 1100px) {
+  .dialog-box.experience {
+    width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dialog-container {
+    justify-content: center;
+  }
+  .dialog-box.experience {
+    width: 80%;
+  }
+}
+
+
+.dialog-box.experience:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px #0ef;
+}
+
+/* ---------- Certifications Flip Card Effect ---------- */
+
+.flip-card {
+  background: transparent;
+  width: 350px;
+  height: 250px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front Side */
+.flip-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.flip-front h3 {
+  color: #0ef;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Back Side */
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  color: #0ef;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.flip-back p{
+    color: #fff;
+}
+
+
+/* Achievement boxes - Neon glow */
+.dialog-box.achievement {
+  background: #081b29;
+  border: 1px solid #0ef;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.3), inset 0 0 10px rgba(0, 238, 255, 0.1);
+  padding: 30px;
+  width: 350px;
+  transition: all 0.4s ease;
+}
+.dialog-box.achievement:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 238, 255, 0.6);
+}
+
+/* Text inside dialog boxes */
+.dialog-box h3 {
+  color: #0ef;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.dialog-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
 
 .contact {
     display: grid;
